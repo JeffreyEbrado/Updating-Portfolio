@@ -681,6 +681,105 @@ p {
 }
 
 /*---------------------------------------------------------SKILLS-MAIN-----------------------------------------------------------*/
+.skills-main {
+  display: none;
+}
+
+.skills-title-panel {
+  position: relative;
+  margin-top: 2vh;
+  margin-left: 5vh;
+  margin-right: 5vh;
+  width: 90%;
+  height: 10%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
+  border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+}
+
+.title-adjuster {
+  width: 90%;
+  height: 50%;
+}
+
+/*All Panel Skills Holder*/
+
+.skills-panel-holder {
+   position: absolute;
+   width: 90%;
+   height: 70%;
+   margin-top: 20vh;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   column-gap: 90px;
+   row-gap: 20px;
+   background-color: pink;
+}
+
+.skills-title {
+font-family: Andale Mono, monospace;
+font-size: 5vh;
+font-weight: bold;
+margin-left: 2vh;
+}
+
+.languages-skills-panel {
+  width: 250px;
+  height: 210px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
+  border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+
+.title {
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 30%; /* Adjust size as needed */
+  height: auto; /* Adjust size as needed */
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  position: relative;
+  width: 80%; /* Adjust width as needed */
+  height: 20px; /* Adjust height as needed */
+  background-color: #ccc;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #00f; /* Adjust color as needed */
+  border-radius: 20px;
+}
+
+.percentage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  line-height: 20px; /* Match height of progress bar */
+  padding: 0 5px;
+}
+
     
 /*--------------------------------------------------------SERVICES-MAIN---------------------------------------------------------*/
 
