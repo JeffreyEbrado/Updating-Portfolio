@@ -134,13 +134,13 @@ html {
 .navigation-menu-mobile {
     position: absolute;
     width: 150px;
-    height: 90%;
-    top: 10%;
+    height: 100%;
+    top: 7%;
     right: 0%;
     background-color: rgb(255, 255, 255);
     transform: translateX(100%); /* Move menu off-screen initially */
     transition: transform 0.2s ease;
-    z-index: 1000;
+    z-index: 100;
     display: none
 }
 
@@ -255,7 +255,6 @@ html {
     align-items: center;
     z-index: 10;
 
-
     background-color: pink; 
 }
 
@@ -320,25 +319,108 @@ html {
     position: fixed;
     top: 0%;
     right: 0%;
-    width: 70px;
+    width: 110px;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
     background-color: rgba(0, 0, 0, 0);
 }
 
+.all-moving-media-panel {
+  width: 100%;
+  height: 70%;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  row-gap: 0px;
+
+  /* Hide panel fully to the right */
+  transform: translateX(70%);
+  transition: transform 0.5s ease;
+}
+
+.all-moving-media-panel.hide-right {
+  /* Expose panel to the left */
+  transform: translateX(0);
+}
+
+
+/*---------------Left-----------*/
+.button-panel {
+  width: 30px;
+  height: 502px;
+  display: flex;
+  justify-content: flex-start;
+  background-color: rgba(0, 0, 0, 0); 
+
+  /*Borders*/
+  border-top: 2px solid rgb(255, 255, 255);
+
+  /*Raduis of borders*/
+  border-top-left-radius: 7px;
+}
+
+.logo-panel-button {
+  position: absolute;
+  width: 32px;
+  height: 40px;
+  color: rgb(250, 250, 250);
+  background-color: rgb(0, 0, 0);
+  z-index: 120;
+
+  /*Borders*/
+  border-bottom: 2px solid rgb(255, 255, 255);
+  border-left: 2px solid rgb(255, 255, 255);
+
+  border-top: 2px solid rgb(0, 0, 0);
+  border-right: 2px solid rgb(0, 0, 0);
+
+  /*Raduis of borders*/
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pic-holder-panel {
+  width: 70px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(0, 0, 0);
+  z-index: 0;
+
+  /*Borders*/
+  border-bottom: 2px solid rgb(255, 255, 255);
+  border-top: 2px solid rgb(255, 255, 255);
+  border-left: 2px solid rgb(255, 255, 255);
+
+  /*Raduis of borders*/
+  border-bottom-left-radius: 20px;
+}
+
+
 /*social-panel-items*/
 .pic-holder-panel {
     position: relative;
-    width: 50px;
+    width: 70px;
     height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0)
+    background-color: rgb(0, 0, 0);
+
+    /*Borders*/
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-top: 2px solid rgb(255, 255, 255);
+    border-left: 2px solid rgb(255, 255, 255);
+
+    /*Raduis of borders*/
+    border-bottom-left-radius: 20px;
 }
 
 /*pic items*/
@@ -373,25 +455,6 @@ html {
         width: 40px;
     }
 
-    .numbers-panel { 
-        width: 200px;
-        height: 200px;
-    }
-
-    .social-image {
-        width: auto;
-        height: 20px;
-      }
-      
-    .youtube-logo {
-        width: auto;
-        height: 15px;
-    }
-      
-    .github-logo {
-        width: auto;
-        height: 45px;
-    }
 }
 
 /*-------------------------+ALL MAIN PANEL+------------------------*/
@@ -426,7 +489,7 @@ html {
 /*Right Side*/
 .profile-pic {
     position: relative;
-    width: 500px;
+    width: 400px;
     height: auto;
     margin-left: 20vh;
     margin-right: 5vh;
@@ -438,11 +501,8 @@ html {
     border-top: 10px solid gray; /* Add top border */
     border-right: 10px solid gray; /* Add right border */
 
-    /* Convert image to black and white */
-    filter: grayscale(20%);
-
     /* Create a linear gradient mask for the bottom part */
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 2%, rgba(58, 56, 56, 0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 1%, rgba(58, 56, 56, 0) 100%);
 }
 
 small {
@@ -524,11 +584,6 @@ p {
   height: 15%;
   height: 15%;
   font-size: 10px;
-}
-
-.pic-holder-panel {
-    width: 30px;
-    height: 300px;
 }
 
 }
@@ -679,6 +734,132 @@ p {
       }
 
 }
+/*---------------------------------------------------------PROJECTS-MAIN-----------------------------------------------------------*/
+
+.projects-main {
+  display: none;
+}
+
+.projects-panel-holder {
+  position: relative;
+  width: 95%;
+  height: 80%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2vh;
+  column-gap: 40px;
+  row-gap: 40px;
+}
+
+.project-panels {
+  width: 410px;
+  height: 600px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+}
+
+/*Projects items*/
+.project-title-panel {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-title {
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: rgba(0, 165, 206, 0.74);
+  padding: 10px;
+}
+
+
+.projects-languages-panels {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 5px;
+  row-gap: 20px;
+}
+
+
+.video-holder-panels {
+  width: 80%;
+  height: 60%;
+  margin-left: 10%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* video parts */
+.picture-proj {
+  object-fit: contain; /* Change from cover to contain */
+  width: 100%;
+  height: 100%; /* Change from auto to 100% */
+}
+
+/*Languages to select in html to put as a Headers*/
+.java,
+.python,
+.javascript,
+.sql,
+.php,
+.html,
+.css {
+  border-radius: 20px;
+
+  padding-top: 11px;    /* Controls the padding on the top */
+  padding-bottom: 11px; /* Controls the padding on the bottom */
+
+  padding-right: 20px;  /* Controls the padding on the right */
+  padding-left: 20px;   /* Controls the padding on the left */
+
+  margin-left: 2vh;
+}
+
+.java {
+  background-color: rgb(88, 88, 88);
+  color: rgb(209, 77, 0);
+}
+
+.html {
+  background-color: rgb(255, 102, 0);
+}
+
+/*reactions panel*/
+.reacts-panel {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.react-icon {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.share-icon {
+ margin-right: 3vh;
+}
+
+/* Optional: Change color or size on hover */
+.react-icon:hover {
+  color: red;
+}
+
+
+
 
 /*---------------------------------------------------------SKILLS-MAIN-----------------------------------------------------------*/
 .skills-main {

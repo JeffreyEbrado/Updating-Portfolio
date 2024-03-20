@@ -274,4 +274,56 @@ exitButtons.forEach(button => {
         failedPanel.style.display = 'none';
     });
 });
+function togglePanel() {
+    const moverPanel = document.querySelector('.mover-panel');
+    const picHolderPanel = document.querySelector('.pic-holder-panel');
+    const button = document.querySelector('.logo-panel-button');
+    
+    if (moverPanel.classList.contains('move-left')) {
+        moverPanel.classList.remove('move-left');
+        picHolderPanel.classList.remove('hide-right');
+        button.textContent = '<<';
+    } else {
+        moverPanel.classList.add('move-left');
+        picHolderPanel.classList.add('hide-right');
+        button.textContent = '>>';
+    }
+}
 
+
+//For Social Media Animation hidden to expose
+let count = 1;
+
+function toggleAllPanel() {
+    const panel = document.querySelector('.all-moving-media-panel');
+    panel.classList.toggle('hide-right');
+    const button = document.querySelector('.logo-panel-button');
+
+    if (count == 1) {
+        button.textContent = '>>';
+        count++;
+    } else {
+        button.textContent = '<<';
+        count--; // Corrected the decrement operation
+    }
+}
+
+//Share button actions
+document.getElementById("share").addEventListener("click", function() {
+    if (navigator.share) {
+      navigator.share({
+        title: document.title,
+        text: "Check out this link!",
+        url: window.location.href
+      }).then(() => {
+        console.log("Shared successfully!");
+      }).catch((error) => {
+        console.error("Error sharing:", error);
+      });
+    } else {
+      console.log("Web Share API not supported.");
+      // Fallback behavior for browsers that do not support Web Share API
+      // For example, you can open a share dialog or provide instructions to share manually
+    }
+  });
+  
