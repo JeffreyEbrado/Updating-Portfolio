@@ -502,7 +502,7 @@ html {
     border-right: 10px solid gray; /* Add right border */
 
     /* Create a linear gradient mask for the bottom part */
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 1%, rgba(58, 56, 56, 0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 1%, rgba(58, 56, 56, 0) 200%);
 }
 
 small {
@@ -527,7 +527,7 @@ small {
     color: rgb(255, 255, 255);
 }
 
-.explore-now {
+.home-btn {
   width: 40%;
   height: 10%;
   margin-top: 5%;
@@ -543,9 +543,14 @@ small {
   animation: fadeThirdInFromBottom 0.5s ease forwards;
 }
 
-.explore-now:hover {
+.home-btn:hover {
   transform: translateY(-25%);
   transition: transform 0.3s ease;
+}
+
+.see_projects_btn {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
 }
 
 
@@ -637,7 +642,6 @@ p {
     width: 40%;
     height: 70%;
     margin-left: 5%;
-    margin-right: 10vh;
     margin-bottom: 2vh;
   
     background: rgb(0, 0, 0);
@@ -682,23 +686,6 @@ p {
     color: rgb(255, 255, 255);
   }
   
-  @media only screen and (max-width: 1234px){
-    .about-picture {
-      margin-top: 2vh;
-       height: 10%;
-    }
-  
-    .about-info-panel {
-      height: 60%;
-    }
-  
-    .about-info {
-      font-size: 2.3vh;
-    }
-}
-
-
-  
     @media only screen and (max-width: 945px){
       .about-picture {
         height: 50%;
@@ -723,14 +710,12 @@ p {
 @media only screen and (max-width: 535px){
   
     .about-picture {
-        margin-right: 5vh;
         height: 30%;
      }
 
      .about-info-panel {
         width: 90%;
         height: 40%;
-        margin-right: 6vh;
       }
 
 }
@@ -740,11 +725,37 @@ p {
   display: none;
 }
 
+/*Top View*/
+
+.projects__title__panel {
+  position: relative;
+  margin-top: 12vh;
+  margin-left: 5vh;
+  margin-right: 5vh;
+  width: 90%;
+  height: 10%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
+  border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+}
+
+.project-ttle {
+  color: rgb(0, 0, 0);
+  font-family: Andale Mono, monospace;
+  font-size: 5vh;
+  font-weight: bold;
+  margin-left: 2vh;
+}
+
+
 .projects-panel-holder {
   position: relative;
   width: 95%;
   height: 80%;
-  background-color: red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -753,6 +764,7 @@ p {
   column-gap: 40px;
   row-gap: 40px;
 }
+
 
 .project-panels {
   width: 410px;
@@ -773,8 +785,18 @@ p {
 .projects-title {
   margin: 0 auto;
   border-radius: 20px;
-  background-color: rgba(0, 165, 206, 0.74);
-  padding: 10px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  font-family: Andale Mono, monospace;
+  font-weight: bold;
+  padding-top: 11px;    /* Controls the padding on the top */
+  padding-bottom: 11px; /* Controls the padding on the bottom */
+
+  padding-right: 20px;  /* Controls the padding on the right */
+  padding-left: 20px;   /* Controls the padding on the left */
+
+  border-bottom: 3px solid rgb(255, 255, 255);
+  border-left: 3px solid rgb(255, 255, 255);
 }
 
 
@@ -784,6 +806,7 @@ p {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
   column-gap: 5px;
   row-gap: 20px;
 }
@@ -799,12 +822,13 @@ p {
   align-items: center;
 }
 
-/* video parts */
+/* picture parts */
 .picture-proj {
   object-fit: contain; /* Change from cover to contain */
   width: 100%;
   height: 100%; /* Change from auto to 100% */
 }
+
 
 /*Languages to select in html to put as a Headers*/
 .java,
@@ -813,7 +837,8 @@ p {
 .sql,
 .php,
 .html,
-.css {
+.css ,
+.otherapp{
   border-radius: 20px;
 
   padding-top: 11px;    /* Controls the padding on the top */
@@ -823,6 +848,10 @@ p {
   padding-left: 20px;   /* Controls the padding on the left */
 
   margin-left: 2vh;
+
+  font-family: Andale Mono, monospace;
+  font-weight: bold;
+  font-size: 17px;
 }
 
 .java {
@@ -832,21 +861,53 @@ p {
 
 .html {
   background-color: rgb(255, 102, 0);
+  color: rgb(255, 255, 255);
+}
+
+.css {
+  background-color: rgb(0, 68, 355);
+  color: rgb(255, 255, 255);
+}
+
+.javascript {
+  background-color: rgb(190, 173, 17);
+}
+
+.otherapp {
+  background-color: rgb(245, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 /*reactions panel*/
+
+.see_more_button,
+.get_code_button {
+  background-color: rgb(83, 83, 83);
+  color: rgb(255, 255, 255);
+  width: 9s0px;
+  height: 30px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+
+.see_more_button:active,
+.get_code_button:active {
+  transform: scale(0.96)
+}
+
 .reacts-panel {
   width: 100%;
   height: 10%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  column-gap: 30px;
+  column-gap: 20px;
 }
 
 .react-icon {
   cursor: pointer;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .share-icon {
@@ -858,6 +919,31 @@ p {
   color: red;
 }
 
+@font-face {
+  font-family: 'heart';
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-solid-900.woff2') format('woff2');
+}
+
+.heart {
+  font-family: 'heart', sans-serif;
+  display: inline-block;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: #ccc;
+  transition: color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+.heart.clicked {
+  color: #f00;
+  transform: scale(1.2);
+}
+
+.comment {
+  font-size: 25px;
+}
 
 
 

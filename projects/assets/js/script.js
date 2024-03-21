@@ -58,14 +58,23 @@ const desktopButtons = [
     { button: contactButton, main: contactMain }
 ];
 
-const exploreButton = document.getElementById('explorenbtnID');
+const hireButton = document.getElementById('hirenbtnID');
+const seeProjButton = document.getElementById('seeprojbtnID');
 
-exploreButton.addEventListener('click', () => {
+hireButton.addEventListener('click', () => {
     homeMain.style.display = 'none';
-    aboutMain.style.display = 'flex';
+    contactMain.style.display = 'flex';
 
     homeButton.classList.remove('pressed');
-    aboutButton.classList.add('pressed');
+    contactButton.classList.add('pressed');
+});
+
+seeProjButton.addEventListener('click', () => {
+    homeMain.style.display = 'none';
+    projectsMain.style.display = 'flex';
+
+    homeButton.classList.remove('pressed');
+    projectsButton.classList.add('pressed');
 });
 
 mobileButtons.forEach(button => {
@@ -327,3 +336,8 @@ document.getElementById("share").addEventListener("click", function() {
     }
   });
   
+  // Nope
+// ...except to show the animation on load
+let b = document.querySelector('button');
+setTimeout(()=>b.focus(), 100);
+setTimeout(()=>b.blur(), 1000);
