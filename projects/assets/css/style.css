@@ -528,11 +528,12 @@ small {
 }
 
 .home-btn {
-  width: 40%;
-  height: 10%;
+  width: 80px;
+  height: 30px;
   margin-top: 5%;
   border: 1px solid rgb(255, 255, 255);
   color: rgb(0, 0, 0);
+  font-size: 10px;
   border-radius: 2.5%;
   cursor: pointer;
   background-color: rgba(255, 255, 255);
@@ -625,7 +626,6 @@ p {
     width: auto;
     height: 70%;
     border-radius: 20px;
-    margin-left: 4vh;
     
     /*Design style*/
     background-position: -100px 0; /* Move the background 20px to the right */
@@ -644,14 +644,11 @@ p {
     margin-left: 5%;
     margin-bottom: 2vh;
   
-    background: rgb(0, 0, 0);
-    border-top: 1px solid rgb(128, 128, 128);
-    border-left: 1px solid rgb(128, 128, 128);
-    border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
-    border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+    background-color: rgba(0, 0, 0, 0);
   }
 
-  .about-title-panel {
+/*All titles in every panel*/
+  .titles-main {
     position: relative;
     display: flex;
     justify-content: flex-start;
@@ -659,25 +656,16 @@ p {
     width: 90%;
     height: 10%;
     border-radius: 10px;
-    margin-top: 10vh;
+    margin-top: 8vh;
     margin-left: 2vh;
   
-    background-color: rgb(0, 0, 0);
-    border-top: 1px solid rgb(128, 128, 128);
-    border-left: 1px solid rgb(128, 128, 128);
-    border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
-    border-right: 10px solid rgb(104, 104, 104); /* Add right border */
-  }
-  /*top parts*/
-  
-  .about-title {
     font-family: Andale Mono, monospace;
-    font-size: 6vh;
+    font-size: 4vh;
     color: rgb(255, 255, 255);
     margin-left: 2vh;
+    color: rgb(255, 255, 255);
   }
-
-  
+ 
   .about-info {
     margin-left: 2vh;
     margin-right: 2vh;
@@ -703,7 +691,7 @@ p {
      }
    
      .about-info {
-       font-size: 1.5vh;    
+       font-size: 2vh;    
      }
 }
 
@@ -712,12 +700,6 @@ p {
     .about-picture {
         height: 30%;
      }
-
-     .about-info-panel {
-        width: 90%;
-        height: 40%;
-      }
-
 }
 /*---------------------------------------------------------PROJECTS-MAIN-----------------------------------------------------------*/
 
