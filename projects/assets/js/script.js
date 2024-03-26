@@ -12,21 +12,32 @@ const toggleButton = document.getElementById('toggleButton');
         }
     });
 
+
 //IN my Services Chaning the definition if mobile
-    document.querySelector('.circle-btn-web').addEventListener('click', function() {
-        document.querySelector('.df-title.services-titles').innerText = 'Web Developement';
-        document.querySelector('.definition.services-info-by-title').innerText = 'Looking to elevate your online presence? I\'m a web developer passionate about crafting user-centric and visually stunning web experiences that not only resonate with your brand but also achieve your specific goals.';
+document.querySelectorAll('.circle-buttons-panel button').forEach(button => {
+    button.addEventListener('click', function() {
+        // Resetting font colors
+        document.querySelectorAll('.circle-buttons-panel button').forEach(btn => {
+            btn.style.color = 'white';
+        });
+
+        // Setting font color for clicked button
+        this.style.color = 'black';
+
+        // Updating content based on button click
+        if (this.classList.contains('circle-btn-web')) {
+            document.querySelector('.df-title.services-titles').innerText = 'Web Development';
+            document.querySelector('.definition.services-info-by-title').innerText = 'Looking to elevate your online presence? I\'m a web developer passionate about crafting user-centric and visually stunning web experiences that not only resonate with your brand but also achieve your specific goals.';
+        } else if (this.classList.contains('circle-btn-soft')) {
+            document.querySelector('.df-title.services-titles').innerText = 'Software Development';
+            document.querySelector('.definition.services-info-by-title').innerText = 'Looking for a custom software solution to solve a business challenge? I specialize in creating tailored applications to streamline processes and enhance user experiences. Let\'s work together to craft a solution that fits your needs perfectly.';
+        } else if (this.classList.contains('circle-btn-graphic')) {
+            document.querySelector('.df-title.services-titles').innerText = 'Graphic Designing';
+            document.querySelector('.definition.services-info-by-title').innerText = 'Have you ever considered adding a touch of visual flair to your app or website?  I\'m passionate about graphic design and use tools like Photoshop and animation software to help bring your ideas to life. ';
+        }
     });
-    
-    document.querySelector('.circle-btn-soft').addEventListener('click', function() {
-        document.querySelector('.df-title.services-titles').innerText = 'Software Development';
-        document.querySelector('.definition.services-info-by-title').innerText = 'Looking for a custom software solution to solve a business challenge? I specialize in creating tailored applications to streamline processes and enhance user experiences. Let\'s work together to craft a solution that fits your needs perfectly.';
-    });
-    
-    document.querySelector('.circle-btn-graphic').addEventListener('click', function() {
-        document.querySelector('.df-title.services-titles').innerText = 'Graphic Designing';
-        document.querySelector('.definition.services-info-by-title').innerText = 'Have you ever considered adding a touch of visual flair to your app or website?  I\'m passionate about graphic design and use tools like Photoshop and animation software to help bring your ideas to life. ';
-    });
+});
+
 
 //Desktop devices
 const homeButton = document.getElementById('homebtnID');
@@ -283,6 +294,7 @@ exitButtons.forEach(button => {
         failedPanel.style.display = 'none';
     });
 });
+
 function togglePanel() {
     const moverPanel = document.querySelector('.mover-panel');
     const picHolderPanel = document.querySelector('.pic-holder-panel');
@@ -336,7 +348,7 @@ document.getElementById("share").addEventListener("click", function() {
     }
   });
   
-  // Nope
+// Nope
 // ...except to show the animation on load
 let b = document.querySelector('button');
 setTimeout(()=>b.focus(), 100);

@@ -39,11 +39,12 @@ html {
     width: 100px;
     height: 100%;
     cursor: pointer;
-    color: rgb(0, 0, 0);
-    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
     font-weight: bold;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
     border: rgba(0, 0, 0, 0);
+    text-shadow: rgb(54, 54, 54) 3px 1px 0px, rgb(54, 54, 54) 5px 2px 0px;
     outline: none;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -526,12 +527,12 @@ small {
 }
 
 .home-btn {
-  width: 80px;
-  height: 30px;
+  width: 150px;
+  height: 50px;
   margin-top: 5%;
   border: 1px solid rgb(255, 255, 255);
   color: rgb(0, 0, 0);
-  font-size: 10px;
+  font-size: 15px;
   border-radius: 2.5%;
   cursor: pointer;
   background-color: rgba(255, 255, 255);
@@ -542,10 +543,6 @@ small {
   animation: fadeThirdInFromBottom 0.5s ease forwards;
 }
 
-.home-btn:hover {
-  transform: translateY(-25%);
-  transition: transform 0.3s ease;
-}
 
 .see_projects_btn {
   background-color: transparent;
@@ -590,6 +587,12 @@ p {
   font-size: 10px;
 }
 
+.home-btn {
+  width: 130px;
+  height: 40px;
+  font-size: 12px;
+}
+
 }
 
 @media only screen and (max-width: 534px) {
@@ -627,10 +630,10 @@ p {
     
     /*Design style*/
     background-position: -100px 0; /* Move the background 20px to the right */
-    border-bottom: 2px solid white;
-    border-right: 2px solid white;
-    border-top: 10px solid rgb(255, 255, 255); /* Add top border */
-    border-left: 10px solid rgb(255, 255, 255); /* Add right border */
+    border-bottom: 2px solid rgb(51, 51, 51);
+    border-right: 2px solid rgb(51, 51, 51);
+    border-top: 10px solid rgb(95, 95, 95); /* Add top border */
+    border-left: 10px solid rgb(95, 95, 95); /* Add right border */
   } 
   
   
@@ -662,6 +665,20 @@ p {
   text-shadow: 
       5px 2px 0 rgb(54, 54, 54), /* right and bottom */
       5px 2px 0 rgb(54, 54, 54); /* double shadow for more emphasis */
+}
+
+@media only screen and (max-width: 900px) {
+  .titles-main {
+    font-size: 4vh;
+    margin-top: 6vh;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .titles-main {
+    font-size: 4vh;
+    margin-top: 4vh;
+  }
 }
 
 
@@ -1070,12 +1087,6 @@ p {
     border-radius: 10px;
     margin-top: 10vh;
     margin-left: 5vh;
-  
-    background-color: rgb(0, 0, 0);
-    border-top: 1px solid rgb(128, 128, 128);
-    border-left: 1px solid rgb(128, 128, 128);
-    border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
-    border-right: 10px solid rgb(104, 104, 104); /* Add right border */
   }
   /*top parts*/
   
@@ -1111,9 +1122,6 @@ p {
     margin-left: 4vh;
     margin-bottom: 2vh;
     border-radius: 10px;
-    background-color: rgb(255, 255, 255);
-    border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
-    border-right: 10px solid rgb(104, 104, 104); /* Add right border */
     
     display: flex;
     justify-content: center;
@@ -1130,6 +1138,8 @@ p {
     flex-wrap: wrap;
 
     background-color: rgb(0, 0, 0);
+    border-top: 1px solid rgb(255, 255, 255); /* Add top border */
+    border-left: 1px solid rgb(255, 255, 255); /* Add right border */
     border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
     border-right: 10px solid rgb(104, 104, 104); /* Add right border */
   }
@@ -1171,13 +1181,17 @@ p {
     height: 15px;
     border-radius: 50%;
     border: none;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
   }
   .circle-btn-soft,
   .circle-btn-graphic{
     margin-left: 5%;
+    color: rgb(255, 255, 255);
   }
-  
+
   @media only screen and (max-width: 1121px){
     .services-title{
      font-size: 3vh;
@@ -1291,10 +1305,6 @@ p {
     height: 70%;
     margin-left: 2.5%;
     margin-top: 2vh;
-    
-    background-color: rgb(255, 255, 255);
-    border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
-    border-right: 10px solid rgb(104, 104, 104); /* Add right border */
 
     display: flex;
     justify-content: center;
@@ -1308,6 +1318,8 @@ p {
     width: 40%;
     height: 50vh;
     background-color: rgb(0, 0, 0);
+    border-top: 1px solid rgb(255, 255, 255); /* Add top border */
+    border-left: 1px solid rgb(255, 255, 255); /* Add right border */
     border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
     border-right: 10px solid rgb(104, 104, 104); /* Add right border */
 }
@@ -1328,7 +1340,7 @@ p {
     font-family: Andale Mono, monospace;
     font-size: 2vh;
     color: rgb(255, 255, 255);
-   text-align: center;
+    text-align: center;
 }
 
 @media only screen and (max-width: 755px) {
@@ -1358,6 +1370,64 @@ p {
     }
 
 }
+
+  /*-------------------------------------------------------EXPERIENCES PART -----------------------------------------------------------*/
+
+  .experience-main {
+    display: none;
+  }
+
+  .experiences-panel-holder {
+   position: relative;
+   width: 90%;
+   height: 90%;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   column-gap: 10px;
+   row-gap: 10px;
+  }
+
+  .example-pic-panel {
+    width: 500px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .example-pic {
+    margin-top: 5vh;
+    width: 100%;
+    height: auto;
+  }
+
+  .desc-panel-holder {
+    width: 700px;
+    height: 300px;
+  }
+
+  .logo-panel {
+    width: 100%;
+    height: 20%;
+  }
+
+  .app-logos {
+    margin-top: 2vh;
+   width: 150px;
+   height: auto;
+   background-color: rgb(255, 255, 255);
+   border-radius: 10px;
+  }
+  .photoshop_logo {
+    margin-top: 0vh;
+  }
+
+  .description-panel {
+    width: 100%;
+    height: 70%;
+  }
+
 
   /*-------------------------------------------------------CONTACT -----------------------------------------------------------*/
  /*Contact Main*/
@@ -1411,7 +1481,9 @@ p {
     flex-wrap: wrap;
     align-items: center;
 
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border-top: 1px solid rgb(128, 128, 128); /* Add top border */
+    border-left: 1px solid rgb(104, 104, 104); /* Add right border */
     border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
     border-right: 10px solid rgb(104, 104, 104); /* Add right border */
     }
@@ -1421,6 +1493,7 @@ p {
         font-size: 3vh;
         font-family: Andale Mono, monospace;
         margin-left: 20px;      
+        color: rgb(255, 255, 255);
     }
     
   /*right bottom panel*/
@@ -1434,7 +1507,9 @@ p {
     align-items: center;
     margin-left: 3vh;
 
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border-top: 1px solid rgb(128, 128, 128); /* Add top border */
+    border-left: 1px solid rgb(104, 104, 104); /* Add right border */
     border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
     border-right: 10px solid rgb(104, 104, 104); /* Add right border */
   }
@@ -1632,6 +1707,15 @@ p {
     }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .fade-first-in-from-above {
     opacity: 0;
     transform: translateY(-20%);
@@ -1655,6 +1739,11 @@ p {
     transform: translateY(20%);
     animation: fadeInFromBottom 1.2s ease-out forwards;
 }
+
+.fadeInElement {
+  animation: fadeIn 1s ease-in-out;
+}
+
 
 
 
